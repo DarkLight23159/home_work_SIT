@@ -18,3 +18,14 @@ int main() {
 		cin >> a;
 		vec.push_back(a);
 	}
+	cout << "//////////////////////////////////////////////////////" << endl;
+	set<int> all_dgts;
+	for (int i = 0; i < n; ++i) { // все цифры в строке
+		int a = vec[i];
+		if ((a < 10) || (a > 99)) {
+			while (a > 0) {
+				all_dgts.insert(a % 10);
+				a /= 10;
+			}
+		}
+	}
