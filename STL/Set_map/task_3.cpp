@@ -18,5 +18,11 @@ int main() {
 	cout << "Введите текст:" << endl;
 	for (int i = 0; i < number_word; i++) {
 		cin >> str;//ввод слова
+		int len = str.length() - 1;//индекс последнего символа в слове
+		//первод слова в нижний регистр 
+		for (int j = 0; j < len; j++) {
+			str[j] = tolower(str[j]);
+		}
 	}
+
 }
