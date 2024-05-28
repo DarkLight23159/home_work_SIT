@@ -37,3 +37,11 @@ int main() {
 			double_dgts.insert(a / 10);
 		}
 	}
+	for (auto i : all_dgts) {
+		cout << i << " ";
+	}
+	cout << endl;
+	for (auto i : double_dgts) {
+		cout << i << " ";
+	}
+	cout << endl;
