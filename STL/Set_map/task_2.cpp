@@ -28,3 +28,8 @@ int main() {
 		}
 	}
 }
+multimap<int, string> res;
+for (auto i : s)
+{
+	res.insert(make_pair(i.second, i.first));
+}
