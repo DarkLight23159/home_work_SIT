@@ -50,5 +50,7 @@ int main() {
 	//через разность s_main и s_other оставляем только те 
 	//элементы из s_main которых нет в s_other
 	set_difference(s_main.begin(), s_main.end(), s_other.begin(), s_other.end(), inserter(s_res, s_res.end()));
-
+	for (auto i : s_res) {
+		cout << i << endl;
+	}
 }
