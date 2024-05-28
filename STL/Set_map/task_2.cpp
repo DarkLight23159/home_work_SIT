@@ -33,3 +33,18 @@ for (auto i : s)
 {
 	res.insert(make_pair(i.second, i.first));
 }
+int k;
+do {
+	cout << "Enter k:"; cin >> k;
+} while (k > se.size() || k < 0);
+
+int d = 0;
+for (auto u : res) {
+	cout << u.first << " " << u.second << endl;
+	d++;
+	if (d == k) {
+		break;
+	}
+}
+return 0;
+}
