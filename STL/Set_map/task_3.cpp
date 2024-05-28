@@ -32,6 +32,18 @@ int main() {
 			//очищаем s_input для следующих предложений 
 			s_input.clear();
 		}
+		else if (str[len] == '.' || str[len] == '!') {//если не вопросительное предложение
+			//то добавляем в s_input последнее слово без ! или ?
+			s_input.insert(str.substr(0, len));
+			//копируем все слова в s_other
+			s_other.insert(s_input.begin(), s_input.end());
+			//очищаем s_input для следующих предложений 
+			s_input.clear();
+		}
+		else {//если предложение не закончилось
+			//то добавляем в s_input слово	
+			s_input.insert(str);
+		}
 	}
 
 }
