@@ -29,3 +29,11 @@ int main() {
 			}
 		}
 	}
+	set<int> double_dgts;
+	for (int i = 0; i < n; ++i) { // цифры из двузначных
+		int a = vec[i];
+		if ((a > 9) && (a < 100)) {
+			double_dgts.insert(a % 10);
+			double_dgts.insert(a / 10);
+		}
+	}
