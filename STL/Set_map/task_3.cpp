@@ -23,6 +23,15 @@ int main() {
 		for (int j = 0; j < len; j++) {
 			str[j] = tolower(str[j]);
 		}
+		//проверка на конец предложения
+		if (str[len] == '?') {//если вопросительное предложение 
+			//то добовляем в s_input последнее слово без ?
+			s_input.insert(str.substr(0, len));
+			//копируем все слова в s_main 
+			s_main.insert(s_input.begin(), s_input.end());
+			//очищаем s_input для следующих предложений 
+			s_input.clear();
+		}
 	}
 
 }
