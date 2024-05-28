@@ -45,3 +45,8 @@ int main() {
 		cout << i << " ";
 	}
 	cout << endl;
+	set<int> finish;
+	set_difference(double_dgts.begin(), double_dgts.end(), all_dgts.begin(), all_dgts.end(), inserter(finish, finish.end()));
+	for (auto i : finish) {
+		cout << i << " ";
+	}
